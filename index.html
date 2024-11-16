@@ -3,36 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transactions</title>
+    <title>Transaction Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="transaction-table get">
-            <h2>GET Transaction</h2>
-            <p>Get list of transactions</p>
-            <button class="action-btn" onclick="handleGet()">Try it out</button>
-        </div>
+    <div class="form-container">
+        <h2>Transaction Form</h2>
+        <form id="transactionForm">
+            <label for="from">From:</label>
+            <input type="text" id="from" name="from" placeholder="Enter sender's name">
 
-        <div class="transaction-table post">
-            <h2>POST Transaction</h2>
-            <p>Add a transaction</p>
-            <button class="action-btn" onclick="handlePost()">Try it out</button>
-        </div>
+            <label for="to">To:</label>
+            <input type="text" id="to" name="to" placeholder="Enter recipient's name">
 
-        
-        <div class="transaction-table put">
-            <h2>PUT Transaction</h2>
-            <p>Update a transaction</p>
-            <button class="action-btn" onclick="handlePut()">Try it out</button>
-        </div>
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" name="amount" placeholder="Enter amount" step="0.01">
 
-        <div class="transaction-table delete">
-            <h2>DELETE Transaction</h2>
-            <p>Remove a transaction</p>
-            <button class="action-btn" onclick="handleDelete()">Try it out</button>
-        </div>
+            <div class="buttons">
+                <button type="button" id="addButton">Add</button>
+                <button type="button" id="editButton" style="display: none;">Edit</button>
+            </div>
+        </form>
+        <h3>Transactions</h3>
+        <ul id="transactionList"></ul>
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
